@@ -14,28 +14,40 @@ update: (output, domEl) ->
   container = $(domEl).find('#container')
   content = 
     """
+	<div style="text-align:center">
     <h2>#{xkcd.title}</h2>
-    <div class='alt'>#{xkcd.alt}</div>
     <img src="#{xkcd.img}"/>
+    <div class='alt'>#{xkcd.alt}</div>
+	</div>
     """
   $(container).html content
 
 # CSS Style
 style: """
-  margin:0
-  padding:0px
-  left:325px
-  top: 150px
-  background:rgba(#000, .25)
+  padding:10px
+  right:20px
+  bottom: 120px
+  color: #fff
+  font-family: Helvetica Neue
+  font-size: 8px
+  font-weight: 500
+  background: rgba(#000, .3)
   border-radius:10px
-  background: rgb(255, 255, 255) transparent;
-  background: rgba(255, 255, 255, 0.0);
-
+  height: auto
+  width: auto
+  
+	
   h2
     text-align:center
   .alt
     text-align:center
-    margin:25px
+    margin:12px
   img
-    margin:10px
+    margin:12px
+	  display: inline-block
+	  width: auto !important
+	  height: 100% !important
+	  margin-left:50%
+	  margin-right:auto
+	  max-width:660px
 """
